@@ -1,0 +1,12 @@
+name: build
+on:
+  pull_request
+jobs:
+  checkov-job:
+    runs-on: ubuntu-latest
+    name:  bridgecrewio/checkov-action@master
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@master
+        with:
+          directory: "."
