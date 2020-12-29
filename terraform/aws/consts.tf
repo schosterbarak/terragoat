@@ -22,17 +22,17 @@ variable "profile" {
 }
 
 variable "region" {
-  default = "us-east-1"
+  default = "us-west-2"
 }
 
 variable "availability_zone" {
   type    = "string"
-  default = "us-east-1a"
+  default = "us-west-2a"
 }
 
 variable "availability_zone2" {
   type    = "string"
-  default = "us-east-1b"
+  default = "us-west-2b"
 }
 
 
@@ -50,4 +50,11 @@ variable "dbname" {
 variable "password" {
   type        = "string"
   description = "Database password"
+  default     = "Aa1234321Bb"
+}
+
+variable "neptune-dbname" {
+  type        = "string"
+  description = "Name of the Neptune graph database"
+  default     = "neptunedb1"
 }
